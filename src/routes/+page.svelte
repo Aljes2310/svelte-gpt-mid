@@ -1,9 +1,15 @@
 <script>
 
+export const config = {
+    runtime: 'edge'
+};
+
     let texto;
     let requestimagen;
     let promise = Promise.resolve([]); //crea una promesa que luego se reemplaza con el valor asignado
     let promise2 = Promise.resolve([])
+    
+
     async function fetchtext () {
         const response= await fetch("https://api.openai.com/v1/completions", {
             method: "POST",
